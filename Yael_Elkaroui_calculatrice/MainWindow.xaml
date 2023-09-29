@@ -1,0 +1,114 @@
+﻿<Window x:Class="Yael_Elkaroui_calculatrice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yael_Elkaroui_calculatrice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="400">
+    <Grid Background="#F05D5E" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+         </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#F6AE2D"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style x:Key="Mystyle" TargetType="{x:Type Control}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#86BBD8"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style x:Key="Mystyle2" TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#D45113"/>
+                    <Setter Property="FontSize"  Value="35"/>
+                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+                </Style>
+            <Style x:Key="Mystyle3" TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#0F7173"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+
+        </Grid.Resources>
+
+        <TextBox Grid.Row="0" Grid.ColumnSpan="4" Name="TB_Resultat" Text="0" TextAlignment="Center" FontSize="50" FontStyle="Normal">
+    <TextBox.Foreground>
+        <SolidColorBrush Color="White"/> <!-- Changer la couleur du texte en blanc -->
+    </TextBox.Foreground>
+    <TextBox.Background>
+        <SolidColorBrush Color="#333333"/> <!-- Définir un arrière-plan noir pas trop foncé -->
+    </TextBox.Background>
+</TextBox>
+        
+        
+        
+        <Button Grid.Row="6" Grid.Column="0" Name="BTN_0" Content="0" Click="BTN_0_Click"/>
+        <Button Grid.Row="3" Grid.Column="0" Name="BTN_1" Content="1" Click="BTN_1_Click" />
+        <Button Grid.Row="3" Grid.Column="1" Name="BTN_2" Content="2" Click="BTN_2_Click"/>
+        <Button Grid.Row="3" Grid.Column="2" Name="BTN_3" Content="3" Click="BTN_3_Click"/>
+        <Button Grid.Row="4" Grid.Column="0" Name="BTN_4" Content="4" Click="BTN_4_Click"/>
+        <Button Grid.Row="4" Grid.Column="1" Name="BTN_5" Content="5" Click="BTN_5_Click"/>
+        <Button Grid.Row="4" Grid.Column="2" Name="BTN_6" Content="6" Click="BTN_6_Click"/>
+        <Button Grid.Row="5" Grid.Column="0" Name="BTN_7" Content="7" Click="BTN_7_Click"/>
+        <Button Grid.Row="5" Grid.Column="1" Name="BTN_8" Content="8" Click="BTN_8_Click"/>
+        <Button Grid.Row="5" Grid.Column="2" Name="BTN_9" Content="9" Click="BTN_9_Click"/>
+
+        <Button Grid.Row="2" Grid.Column="3" Name="BTNplus" Style="{StaticResource Mystyle}" Content="+" Click="BTNplus_Click" />
+        <Button Grid.Row="3" Grid.Column="3" Name="BTNmoins" Style="{StaticResource Mystyle}" Content="-" Click="BTNmoins_Click"/>
+        <Button Grid.Row="4" Grid.Column="3" Name="BTNfois" Style="{StaticResource Mystyle}" Content="*" Click="BTNfois_Click"/>
+        <Button Grid.Row="6" Grid.Column="1" Name="BTN_CLR" Style="{StaticResource Mystyle2}" Content="CLR" Click="BTN_CLR_Click"/>
+        <Button Grid.Row="6" Grid.Column="2" Name="BTNegal" Style="{StaticResource Mystyle3}" Content="=" Click="BTNegal_Click"/>
+        <Button Grid.Row="5" Grid.Column="3" Name="BTNdivise" Style="{StaticResource Mystyle}" Content="/" Click="BTNdivise_Click"/>
+        <Button Grid.Row="6" Grid.Column="3" Name="BTNvirgule" Style="{StaticResource Mystyle}" Content="," Click="BTNvirgule_Click_1"/>
+        <Button Grid.Row="1" Grid.Column="3" Name="BTN_pourcentage" Content="%" Style="{StaticResource Mystyle}" Click="BTN_pourcentage_Click"/>
+        <Button Grid.Row="2" Grid.Column="2" Name="BTN_pi" Content="π" Click="BTN_pi_Click" Style="{StaticResource Mystyle}"/>
+        <Button Grid.Row="2" Grid.Column="1" Name="BTN_au_carre" Content="x²"  Style="{StaticResource Mystyle}" Click="BTN_au_carre_Click"/>
+        <Button Grid.Row="2" Grid.Column="0" Name="BTN_sqr" Content="√"  Style="{StaticResource Mystyle}" Click="BTN_sqr_Click_1"/>
+        <Button Grid.Row="1" Grid.Column="0" Name="BTN_sin" Content="Sin"  Style="{StaticResource Mystyle}" Click="BTN_sin_Click"/>
+        <Button Grid.Row="1" Grid.Column="1" Name="BTN_cos" Content="Cos"  Style="{StaticResource Mystyle}" Click="BTN_cos_Click"/>
+        <Button Grid.Row="1" Grid.Column="2" Name="BTN_tan" Content="Tan"  Style="{StaticResource Mystyle}" Click="BTN_tan_Click"/>
+    </Grid>
+</Window>
+    
