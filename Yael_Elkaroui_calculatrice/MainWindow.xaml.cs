@@ -109,7 +109,7 @@ namespace Yael_Elkaroui_calculatrice
             N1 = Double.Parse(TB_Resultat.Text);
             operation = '-';
             TB_Resultat.Text = "";
-            //guguyg
+            //guguyghh
         }
 
         private void BTNfois_Click(object sender, RoutedEventArgs e)
