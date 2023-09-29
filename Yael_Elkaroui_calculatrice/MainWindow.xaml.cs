@@ -86,6 +86,7 @@ namespace Yael_Elkaroui_calculatrice
         public void display(string num)
         {
 
+
             if (TB_Resultat.Text == "0")
             {
                 TB_Resultat.Text = num;
@@ -98,7 +99,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTNplus_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = '+';
             TB_Resultat.Text = "";
 
@@ -106,7 +112,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTNmoins_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = '-';
             TB_Resultat.Text = "";
             //guguyghhbvg
@@ -114,6 +125,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTNfois_Click(object sender, RoutedEventArgs e)
         {
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else 
+
             N1 = Double.Parse(TB_Resultat.Text);
             operation = '*';
             TB_Resultat.Text = "";
@@ -122,7 +139,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTNdivise_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = '/';
             TB_Resultat.Text = "";
 
@@ -130,7 +152,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTNegal_Click(object sender, RoutedEventArgs e)
         {
-            N2 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N2 = Double.Parse(TB_Resultat.Text);
             switch (operation)
             {
                 case '+':
@@ -164,7 +191,12 @@ namespace Yael_Elkaroui_calculatrice
         private void BTN_pi_Click(object sender, RoutedEventArgs e)
         {
             {
-                N1 = Double.Parse(TB_Resultat.Text);
+                if (TB_Resultat.Text == "")
+                {
+                    TB_Resultat.Text = "ERROR";
+                }
+                else
+                    N1 = Double.Parse(TB_Resultat.Text);
                 operation = 'π';
                 TB_Resultat.Text = "";
                 resultat = N1 * Math.PI;
@@ -174,7 +206,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTN_sqr_Click_1(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = '√';
             TB_Resultat.Text = "";
             resultat = Math.Sqrt (N1);
@@ -183,7 +220,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTN_au_carre_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = '²';
             TB_Resultat.Text = "";
             resultat = N1*N1;
@@ -192,7 +234,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTN_pourcentage_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = '%';
             TB_Resultat.Text = "";
             resultat = N1 / 100;
@@ -210,7 +257,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTN_sin_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = 'S';
             TB_Resultat.Text = "";
             resultat = Math.Sin(N1);
@@ -219,7 +271,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTN_cos_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = 'C';
             TB_Resultat.Text = "";
             resultat = Math.Cos(N1);
@@ -228,7 +285,12 @@ namespace Yael_Elkaroui_calculatrice
 
         private void BTN_tan_Click(object sender, RoutedEventArgs e)
         {
-            N1 = Double.Parse(TB_Resultat.Text);
+            if (TB_Resultat.Text == "")
+            {
+                TB_Resultat.Text = "ERROR";
+            }
+            else
+                N1 = Double.Parse(TB_Resultat.Text);
             operation = 'T';
             TB_Resultat.Text = "";
             resultat = Math.Tan(N1);
